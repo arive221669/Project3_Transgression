@@ -894,7 +894,7 @@ GameObject:
   - component: {fileID: 847682088}
   - component: {fileID: 847682087}
   m_Layer: 5
-  m_Name: Emails
+  m_Name: Chats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1049,10 +1049,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d5de2e7f6f29741b43047869ebfcc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInput: {fileID: 0}
-  userReplies: {fileID: 0}
-  customer: {fileID: 0}
-  customerReplies: {fileID: 0}
+  userInput: {fileID: 847682087}
+  userReplies: {fileID: 2082224614}
+  customer: {fileID: 1077819872}
+  customerReplies: {fileID: 1137833724}
 --- !u!4 &919891970
 Transform:
   m_ObjectHideFlags: 0
@@ -1352,15 +1352,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Hi Food Company,
-
-
-    I was missing  some items today, can you please help me get them or credit them.
-
-
-    Thanks,
-
-    Jennifer'
+  m_Text: 
 --- !u!222 &1077819873
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1451,8 +1443,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296005580}
-        m_MethodName: RepliesToCustomer
+      - m_Target: {fileID: 919891969}
+        m_MethodName: PlayText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1462,8 +1454,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 296005580}
-        m_MethodName: PlayText
+      - m_Target: {fileID: 919891969}
+        m_MethodName: RepliesToCustomer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
