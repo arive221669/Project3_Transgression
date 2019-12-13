@@ -20,38 +20,31 @@ public class Chats : MonoBehaviour
     private float timerForCustomerReplies = 3f;
 
     private string currentTime;
-    private string timeNow;
-    private bool stopTime;
+
 
 
     public void Update()
     {
-
         timer += Time.deltaTime;
-
-        while(stopTime == false)
-        {
-            currentTime = DateTime.Now.ToLongTimeString();
-        }
-
+        currentTime = DateTime.Now.ToLongTimeString();
+        
         if (timer >= 5f && states == 0)
         {
-            stopTime = true;
-            timeNow = currentTime;
-            
-            customer.text = timeNow + " The salsa was packed upside down! It opened and spilled everywhere! Everything is ruined in this bag!";
+
+            customer.text = currentTime + " The salsa was packed upside down! It opened and spilled everywhere! Everything is ruined in this bag!";
             customer.GetComponent<Text>().enabled = true;
         }
 
         else if (timer >= timerForCustomerReplies && states == 1)
         {
+            customerReplies.text = currentTime + " Thank you, but can I just have a refund? I don't have time to get a new order";
             customer.GetComponent<Text>().enabled = false;
             customerReplies.GetComponent<Text>().enabled = true;
         }
 
         else if (timer >= timerForCustomerReplies && states == 2)
         {
-            customerReplies.text = timeNow + " Why can't you help?? Are you being serious right now?! That's completely unacceptable, I demand to speak to a manager!";
+            customerReplies.text = currentTime + " So you guys can't even get things right and you're just going not do anything?! How dumb is that?!";
             customer.GetComponent<Text>().enabled = false;
             customerReplies.GetComponent<Text>().enabled = true;
 
@@ -61,7 +54,7 @@ public class Chats : MonoBehaviour
 
     public void RepliesToCustomer()
         {
-            userReplies.text = "10:31:50 AM [Agent] " + userInput.text;
+        userReplies.text = currentTime + "  " + userInput.text;
         }
 
     public void PlayText()

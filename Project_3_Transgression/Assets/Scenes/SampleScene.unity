@@ -1569,8 +1569,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Thanks for helping, I was missing the ginger ale from my order. Is there
-    anyway I can have it delivered?
+  m_Text: 
 --- !u!222 &1137833725
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1613,7 +1612,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -270, y: 133.2}
+  m_AnchoredPosition: {x: -274, y: 133.2}
   m_SizeDelta: {x: 394.4, y: 163.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1190784047
