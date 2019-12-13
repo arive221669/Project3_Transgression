@@ -5,19 +5,25 @@ using UnityEngine.UI;
 
 public class Emails : MonoBehaviour
 {
-    string value = "This is a string.";
-    int startIndex = 5;
-    int length = 2;
+    public InputField userInput;
+    public Text userReplies;
+    private bool weGotIt = false;
 
-    void Start()
-    {
-        
-    }
 
-    void Update()
+     public void PlayText()
     {
-        string substring = value.Substring(startIndex, length);
-        Debug.Log(substring);
+
+        weGotIt = userInput.text.Contains("I'm sorry");
+
+
+        if (weGotIt == true)
+        {
+            userReplies.text = userInput.text;
+        }
+        else
+        {
+            weGotIt = false;
+        }
     }
 
     //search within the 0 index within the first 10 chars or so to find if player said "I'm sorry" or "I apologize", etc. to determine response
