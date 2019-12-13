@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Emails : MonoBehaviour
+public class Chats : MonoBehaviour
 {
     public InputField userInput;
     public Text userReplies;
@@ -18,7 +18,9 @@ public class Emails : MonoBehaviour
 
     public void Update()
     {
-        timer += Time.deltaTime;
+        
+
+    timer += Time.deltaTime;
 
         Debug.Log(timer);
 
@@ -43,28 +45,27 @@ public class Emails : MonoBehaviour
     }
 
     public void RepliesToCustomer()
+{
+    userReplies.text = userInput.text;
+}
+
+public void PlayText()
+{
+
+    weGotIt = userInput.text.Contains("I'm sorry");
+
+
+    if (weGotIt == true)
     {
-        userReplies.text = userInput.text;
-    }
-
-    public void PlayText()
-    {
-
-        weGotIt = userInput.text.Contains("I'm sorry");
-
-
-        if (weGotIt == true)
-        {
-            timer = 0;
-            states = 1;
-
-        }
-        else if (weGotIt == false)
-        {
-            timer = 0;
-            states = 2;
-        }
+        timer = 0;
+        states = 1;
 
     }
+    else if (weGotIt == false)
+    {
+        timer = 0;
+        states = 2;
+    }
 
+}
 }
