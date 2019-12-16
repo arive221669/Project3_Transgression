@@ -13,6 +13,7 @@ public class Chats : MonoBehaviour
     public Text customer;
     public Text customerReplies;
     private bool weGotIt = false;
+    private bool refund = false;
 
     private int states;
 
@@ -49,6 +50,7 @@ public class Chats : MonoBehaviour
             customerReplies.GetComponent<Text>().enabled = true;
 
         }
+
     }
 
 

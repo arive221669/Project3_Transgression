@@ -35,7 +35,7 @@ public class Emails : MonoBehaviour
 
         else if (timer >= timerForCustomerReplies && states == 2)
         {
-            customerReplies.text = "Why can't you help?? Are you being serious right now?! That's completely unaccetable, I demand to speak to a manager!";
+            customerReplies.text = "Why can't you help?? Are you being serious right now?! That's completely unacceptable, I demand to speak to a manager!";
             customer.GetComponent<Text>().enabled = false;
             customerReplies.GetComponent<Text>().enabled = true;
 
